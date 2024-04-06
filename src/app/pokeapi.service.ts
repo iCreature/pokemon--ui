@@ -8,11 +8,16 @@ import {Observable} from 'rxjs';
 export class PokeapiService {
 
   readonly APIURL = "https://pokeapi.co/api/v2";
+  readonly ImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
   constructor(private http: HttpClient) { }
 
-  getPokemoneList():Observable<any[]>{
+  getPokemoneList() : Observable<any[]> {
     return this.http.get<any[]>(this.APIURL+'/departments/');
   }
-  
+
+  getImage(imageId: any) : Observable<any[]> {
+    return this.http.get<any[]>(this.ImageURL+imageId+'.png');
+  }
+
 }
