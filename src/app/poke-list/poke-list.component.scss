@@ -1,0 +1,21 @@
+.profile-img {
+    width: 60px; /* Set width as needed */
+    height: 60px; /* Set height as needed */
+    border-radius: 50%; /* This makes the element a circle */
+    object-fit: cover; /* Ensures the image covers the entire circle */
+  }
+
+  td {
+    text-align: center; /* Center align content within table cells */
+    padding: 10px; /* Adjust padding as needed */
+    width : 40%;
+  }
+
+  .table-algin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+ 
+ 
