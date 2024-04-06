@@ -34,4 +34,4 @@ jobs:
 
     - name: Deploy to bucket
       run: |
-        aws s3 sync ./dist/pokemone/ s3://${{ secrets.AWS_S3_BUCKET }}
+        aws s3 sync ./dist/pokemoen-ui/ s3://${{ secrets.AWS_S3_BUCKET }}
