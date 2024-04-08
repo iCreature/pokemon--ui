@@ -7,13 +7,17 @@ import {Observable} from 'rxjs';
 })
 export class PokeapiService {
 
-  readonly APIURL = "https://pokeapi.co/api/v2";
+  readonly APIURL = "https://r835g59akl.execute-api.eu-west-1.amazonaws.com/deploy/pokemon/";
   readonly ImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
   constructor(private http: HttpClient) { }
 
   getPokemoneList() : Observable<any[]> {
-    return this.http.get<any[]>(this.APIURL+'/departments/');
+    return this.http.get<any[]>(this.APIURL + 'summary');
+  }
+ 
+  getDetailed(id:any) : Observable<any[]> {
+    return this.http.get<any[]>(this.APIURL + 'details/' + id);
   }
 
   getImage(imageId: any) : Observable<any[]> {

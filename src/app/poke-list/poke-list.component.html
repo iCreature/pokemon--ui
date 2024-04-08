@@ -7,12 +7,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let data of PokemonList">
             <div class="table-algin">
                 <td>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png" alt="Profile Picture" class="profile-img">
+                    <img src="getImage(data.id)" alt="Profile Picture" class="profile-img">
                 </td>
-                <td>name</td>
+                <td>{{data.name}}</td>
                 <td>
                     <button type="button" class="btn btn-light m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="static" data-keyboard="False">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
