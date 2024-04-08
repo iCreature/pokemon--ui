@@ -1,9 +1,14 @@
 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png" class="img-fluid" alt="Responsive image">
 <br><br><br>
 <ul class="list-group">
-    <li class="list-group-item">name: </li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">Name: {{ DetailList.species.name }}</li>
+    <li class="list-group-item">Weight: {{ DetailList.weight }}</li>
+    <li class="list-group-item">Abilities:
+      <ul>
+        <li *ngFor="let ability of DetailList.abilities">
+          {{ ability.ability.name }} (Hidden: {{ ability.is_hidden ? 'Yes' : 'No' }})
+        </li>
+      </ul>
+    </li>
   </ul>
+  
